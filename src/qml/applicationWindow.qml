@@ -1,6 +1,6 @@
 import QtQuick 2.4
-import "./CloudUI/window"
-import "./CloudUI/controls"
+import "../UIKit/CloudUI/window"
+import "../UIKit/CloudUI/controls"
 
 
 ApplicationWindow{

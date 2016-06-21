@@ -42,7 +42,7 @@ View {
     Label {
         id: label
 
-        font.pixelSize: 14 * Units.dp
+        font.pixelSize: 14 * g_dp
         font.family: "Roboto"
         font.weight: Font.DemiBold
 

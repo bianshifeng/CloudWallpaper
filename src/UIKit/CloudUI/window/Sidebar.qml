@@ -11,6 +11,7 @@
 import QtQuick 2.4
 import "../core"
 import "../listitems" as ListItem
+import "../components"
 
 
 /*!

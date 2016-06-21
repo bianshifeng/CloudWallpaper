@@ -14,12 +14,11 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc,argv);
 
-//    QQmlApplicationEngine engine;
-//    initEngine(qobject_cast<QQmlEngine*> (&engine));
-//    engine.load(QUrl(QStringLiteral("qrc:/qml/applicationWindow.qml")));
+    QQmlApplicationEngine engine;
+    initEngine(qobject_cast<QQmlEngine*> (&engine));
+    engine.load(QUrl(QStringLiteral("qrc:/qml/applicationWindow.qml")));
 
     QQuickView view;
-    initEngine(view.engine());
     initView(&view);
     view.show();
     return app.exec();
@@ -27,6 +26,7 @@ int main(int argc, char *argv[])
 
 void initView(QQuickView *view)
 {
+    initEngine(view->engine());
     view->setResizeMode(QQuickView::SizeRootObjectToView);
     view->setSource(QUrl(QStringLiteral("qrc:/qml/main.qml")));
     view->setModality(Qt::WindowModal);

@@ -16,6 +16,7 @@ import "../controls"
 import "../components"
 import "../popups"
 import "../listitems" as ListItem
+import "../core/utils.js" as Utils
 
 
 /*!
@@ -257,7 +258,7 @@ Item {
             verticalCenter: actionsRow.verticalCenter
             left: parent.left
             right: actionsRow.left
-            leftMargin:16 * g_dp + (leftItem.show ? 1 * Device.gridUnit * g_dp : 0)
+            leftMargin:16 * g_dp + (leftItem.show ? 1 * g_gridUnit * g_dp : 0)
             rightMargin: 16 * g_dp
 
             Behavior on leftMargin {
